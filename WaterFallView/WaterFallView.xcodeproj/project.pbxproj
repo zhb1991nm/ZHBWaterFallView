@@ -34,7 +34,7 @@
 		FD0431311B0770970049970C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0431201B0770970049970C /* UIImageView+WebCache.m */; };
 		FD0431321B0770970049970C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0431221B0770970049970C /* UIView+WebCacheOperation.m */; };
 		FD0431351B0772F20049970C /* act.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0431341B0772F20049970C /* act.png */; };
-		FD0431391B07852A0049970C /* ZHBRereshView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0431381B07852A0049970C /* ZHBRereshView.m */; };
+		FD04313C1B07A0D10049970C /* ZHBRefreshScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +101,8 @@
 		FD0431211B0770970049970C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		FD0431221B0770970049970C /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		FD0431341B0772F20049970C /* act.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act.png; sourceTree = "<group>"; };
-		FD0431371B07852A0049970C /* ZHBRereshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRereshView.h; sourceTree = "<group>"; };
-		FD0431381B07852A0049970C /* ZHBRereshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRereshView.m; sourceTree = "<group>"; };
+		FD04313A1B07A0D10049970C /* ZHBRefreshScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshScrollView.h; sourceTree = "<group>"; };
+		FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +242,8 @@
 		FD0431361B0784F40049970C /* PullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				FD0431371B07852A0049970C /* ZHBRereshView.h */,
-				FD0431381B07852A0049970C /* ZHBRereshView.m */,
+				FD04313A1B07A0D10049970C /* ZHBRefreshScrollView.h */,
+				FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */,
 			);
 			path = PullToRefresh;
 			sourceTree = "<group>";
@@ -354,7 +354,6 @@
 				FD0431251B0770970049970C /* SDImageCache.m in Sources */,
 				FD0431291B0770970049970C /* SDWebImageDownloaderOperation.m in Sources */,
 				FD0431321B0770970049970C /* UIView+WebCacheOperation.m in Sources */,
-				FD0431391B07852A0049970C /* ZHBRereshView.m in Sources */,
 				FD0430D71B06EEFD0049970C /* ViewController.m in Sources */,
 				FD04312C1B0770970049970C /* UIButton+WebCache.m in Sources */,
 				FD0431241B0770970049970C /* NSData+ImageContentType.m in Sources */,
@@ -371,6 +370,7 @@
 				FD0430D11B06EEFD0049970C /* main.m in Sources */,
 				FD04312E1B0770970049970C /* UIImage+MultiFormat.m in Sources */,
 				FD0431301B0770970049970C /* UIImageView+HighlightedWebCache.m in Sources */,
+				FD04313C1B07A0D10049970C /* ZHBRefreshScrollView.m in Sources */,
 				FD04312D1B0770970049970C /* UIImage+GIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +496,7 @@
 				INFOPLIST_FILE = WaterFallView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -507,7 +507,7 @@
 				INFOPLIST_FILE = WaterFallView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -564,6 +564,7 @@
 				FD0430F01B06EEFD0049970C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD0430F11B06EEFD0049970C /* Build configuration list for PBXNativeTarget "WaterFallViewTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +573,7 @@
 				FD0430F31B06EEFD0049970C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

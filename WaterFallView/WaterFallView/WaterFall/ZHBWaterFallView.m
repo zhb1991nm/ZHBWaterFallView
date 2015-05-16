@@ -248,15 +248,6 @@
     [self waterFallViewDidScroll];
 }
 
-//#pragma mark - UIGestureRecognizerDelegate
-//-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-//    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
-//        if (self.contentOffset.y <= 0) {
-//            return NO;
-//        }
-//    }
-//    return YES;
-//}
 
 #pragma mark - getter&setter
 

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ZHBWaterFallViewCell.h"
+#import "ZHBRefreshScrollView.h"
 
 @protocol ZHBWaterFallViewDatasource,ZHBWaterFallViewDelegate;
 
-@interface ZHBWaterFallView : UIScrollView<UIScrollViewDelegate>
+@interface ZHBWaterFallView : ZHBRefreshScrollView<UIScrollViewDelegate>
 
 - (instancetype)initWithFrame:(CGRect)frame;
 
