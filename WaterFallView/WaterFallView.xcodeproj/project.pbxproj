@@ -35,6 +35,9 @@
 		FD0431321B0770970049970C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0431221B0770970049970C /* UIView+WebCacheOperation.m */; };
 		FD0431351B0772F20049970C /* act.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0431341B0772F20049970C /* act.png */; };
 		FD04313C1B07A0D10049970C /* ZHBRefreshScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */; };
+		FD38D87C1B08C294002A7144 /* ZHBRefreshIndictorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */; };
+		FD38D87E1B08E22B002A7144 /* arrow-01.png in Resources */ = {isa = PBXBuildFile; fileRef = FD38D87D1B08E22B002A7144 /* arrow-01.png */; };
+		FDF812381B08BCA60000754E /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,11 @@
 		FD0431341B0772F20049970C /* act.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act.png; sourceTree = "<group>"; };
 		FD04313A1B07A0D10049970C /* ZHBRefreshScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshScrollView.h; sourceTree = "<group>"; };
 		FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshScrollView.m; sourceTree = "<group>"; };
+		FD38D87A1B08C294002A7144 /* ZHBRefreshIndictorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshIndictorView.h; sourceTree = "<group>"; };
+		FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshIndictorView.m; sourceTree = "<group>"; };
+		FD38D87D1B08E22B002A7144 /* arrow-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-01.png"; sourceTree = "<group>"; };
+		FDF812361B08BCA60000754E /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 		FD0430CD1B06EEFD0049970C /* WaterFallView */ = {
 			isa = PBXGroup;
 			children = (
+				FDF812351B08BCA60000754E /* MMMaterialDesignSpinner */,
 				FD0431361B0784F40049970C /* PullToRefresh */,
 				FD0431011B0770970049970C /* SDWebImage */,
 				FD0430F41B06EFDB0049970C /* WaterFall */,
@@ -164,6 +173,7 @@
 		FD0430CE1B06EEFD0049970C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FD38D87D1B08E22B002A7144 /* arrow-01.png */,
 				FD0431341B0772F20049970C /* act.png */,
 				FD0430CF1B06EEFD0049970C /* Info.plist */,
 				FD0430D01B06EEFD0049970C /* main.m */,
@@ -244,8 +254,19 @@
 			children = (
 				FD04313A1B07A0D10049970C /* ZHBRefreshScrollView.h */,
 				FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */,
+				FD38D87A1B08C294002A7144 /* ZHBRefreshIndictorView.h */,
+				FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */,
 			);
 			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		FDF812351B08BCA60000754E /* MMMaterialDesignSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				FDF812361B08BCA60000754E /* MMMaterialDesignSpinner.h */,
+				FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */,
+			);
+			path = MMMaterialDesignSpinner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD0430DA1B06EEFD0049970C /* Main.storyboard in Resources */,
+				FD38D87E1B08E22B002A7144 /* arrow-01.png in Resources */,
 				FD0430DF1B06EEFD0049970C /* LaunchScreen.xib in Resources */,
 				FD0431351B0772F20049970C /* act.png in Resources */,
 				FD0430DC1B06EEFD0049970C /* Images.xcassets in Resources */,
@@ -357,6 +379,7 @@
 				FD0430D71B06EEFD0049970C /* ViewController.m in Sources */,
 				FD04312C1B0770970049970C /* UIButton+WebCache.m in Sources */,
 				FD0431241B0770970049970C /* NSData+ImageContentType.m in Sources */,
+				FD38D87C1B08C294002A7144 /* ZHBRefreshIndictorView.m in Sources */,
 				FD04312B1B0770970049970C /* SDWebImagePrefetcher.m in Sources */,
 				FD0431281B0770970049970C /* SDWebImageDownloader.m in Sources */,
 				FD0430D41B06EEFD0049970C /* AppDelegate.m in Sources */,
@@ -371,6 +394,7 @@
 				FD04312E1B0770970049970C /* UIImage+MultiFormat.m in Sources */,
 				FD0431301B0770970049970C /* UIImageView+HighlightedWebCache.m in Sources */,
 				FD04313C1B07A0D10049970C /* ZHBRefreshScrollView.m in Sources */,
+				FDF812381B08BCA60000754E /* MMMaterialDesignSpinner.m in Sources */,
 				FD04312D1B0770970049970C /* UIImage+GIF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

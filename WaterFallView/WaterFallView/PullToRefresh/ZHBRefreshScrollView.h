@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ZHBRefreshScrollViewDelegate;
+
 @interface ZHBRefreshScrollView : UIScrollView
+
+@property (nonatomic,weak) id<ZHBRefreshScrollViewDelegate> refreshDelegate;
+
+@property (nonatomic,assign) CGFloat pullDistance;//下拉多少距离刷新
+
+-(void)refreshFinishedAnimated:(BOOL)animated;
+
+@end
+
+@protocol ZHBRefreshScrollViewDelegate <NSObject>
+
+@required
+
+-(void)ZHBRefreshScrollViewStartRefresh:(ZHBRefreshScrollView *)scrollView;
 
 @end

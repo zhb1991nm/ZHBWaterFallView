@@ -10,11 +10,12 @@
 #import "ZHBWaterFallView.h"
 #import "WaterFallCell.h"
 #import "UIImageView+WebCache.h"
-#import "ZHBRereshView.h";
 
-@interface ViewController ()<ZHBWaterFallViewDatasource,ZHBWaterFallViewDelegate>
+@interface ViewController ()<ZHBWaterFallViewDatasource,ZHBWaterFallViewDelegate,ZHBRefreshScrollViewDelegate>
 
 @property (nonatomic,strong) NSArray* imageArray;
+
+@property (nonatomic,strong) ZHBWaterFallView *waterFallView;
 
 @end
 
@@ -30,24 +31,17 @@
                        @"http://ww3.sinaimg.cn/bmiddle/70e85378jw1drayzoda5dj.jpg",
                        nil];
     // Do any additional setup after loading the view, typically from a nib.
-    ZHBRereshView *refreshView = [[ZHBRereshView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:refreshView];
     
-    ZHBWaterFallView *waterFallView = [[ZHBWaterFallView alloc] initWithFrame:self.view.bounds];
-    waterFallView.waterFallDataSource = self;
-    waterFallView.waterFallDelegate = self;
-    waterFallView.numberOfcolumn = 2;
-    waterFallView.backgroundColor = [[UIColor alloc] initWithWhite:0.9f alpha:1.0f];
-    [self.view addSubview:waterFallView];
-    refreshView.scrollViewToRefresh = waterFallView;
-    [waterFallView reloadData];
-    
+    [self.view addSubview:self.waterFallView];
+    [_waterFallView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark ZHBWaterFallViewDatasource & ZHBWaterFallViewDelegate
 
 - (NSInteger)numberOfWaterFallCellsInWaterFallView:(ZHBWaterFallView *)waterFallView{
     return 500;
@@ -62,17 +56,47 @@
     WaterFallCell *cell = [waterFallView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[WaterFallCell alloc] initWithIdentifier:cellIdentifier];
+        cell.layer.shadowColor = [UIColor blackColor].CGColor;
+        cell.layer.shadowOpacity = 0.8f;
+        cell.layer.shadowOffset = CGSizeMake(0, 2);
     }
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[arc4random() % 4]] placeholderImage:[UIImage imageNamed:@"act"]];
     cell.descriptionLabel.text = @"Description";
-    cell.layer.shadowColor = [UIColor grayColor].CGColor;
-    cell.layer.shadowOffset = CGSizeMake(4, 4);
     
     return cell;
 }
 
 - (void)waterFallView:(ZHBWaterFallView *)waterFallView didSelectAtIndex:(NSInteger)index{
     NSLog(@"did select at index:%d",index);
+}
+
+#pragma mark - ZHBRefreshScrollViewDelegate
+-(void)ZHBRefreshScrollViewStartRefresh:(ZHBRefreshScrollView *)scrollView{
+    if (scrollView == _waterFallView) {
+        [self performSelector:@selector(refreshFinish) withObject:nil afterDelay:5.0f];
+    }
+}
+
+
+#pragma mark - event response
+-(void)refreshFinish{
+    [_waterFallView refreshFinishedAnimated:YES];
+}
+
+
+
+#pragma mark getter&setter
+-(ZHBWaterFallView *)waterFallView{
+    if (!_waterFallView) {
+        ZHBWaterFallView *waterFallView = [[ZHBWaterFallView alloc] initWithFrame:self.view.bounds];
+        waterFallView.waterFallDataSource = self;
+        waterFallView.waterFallDelegate = self;
+        waterFallView.refreshDelegate = self;
+        waterFallView.numberOfcolumn = 2;
+        waterFallView.backgroundColor = [UIColor whiteColor];
+        _waterFallView = waterFallView;
+    }
+    return _waterFallView;
 }
 
 @end
