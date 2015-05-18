@@ -95,7 +95,7 @@
 }
 
 - (void)waterFallViewDidScroll:(ZHBWaterFallView *)waterFallView{
-    if (waterFallView.contentOffset.y >= waterFallView.contentSize.height - waterFallView.frame.size.height && !_loading && currentPage < allPage) {
+    if (waterFallView.contentOffset.y >= waterFallView.contentSize.height - waterFallView.frame.size.height - 44 && !_loading && currentPage < allPage) {
         currentPage ++;
         [self requestData];
         NSLog(@"滚动到底");
