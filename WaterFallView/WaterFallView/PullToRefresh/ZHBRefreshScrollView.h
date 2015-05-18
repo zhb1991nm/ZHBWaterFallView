@@ -18,6 +18,8 @@
 
 -(void)refreshFinishedAnimated:(BOOL)animated;
 
+-(void)pullToRefresh;
+
 @end
 
 @protocol ZHBRefreshScrollViewDelegate <NSObject>

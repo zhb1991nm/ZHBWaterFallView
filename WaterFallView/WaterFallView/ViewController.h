@@ -13,3 +13,10 @@
 
 @end
 
+@interface ShowObject : NSObject
+
+@property (nonatomic,copy) NSString *url;
+
+@property (nonatomic,assign) CGFloat height;
+
+@end

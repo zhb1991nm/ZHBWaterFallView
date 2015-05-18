@@ -97,6 +97,21 @@ static CGFloat lastY = 0;
 }
 
 #pragma mark public methods
+-(void)pullToRefresh{
+    if (self.superview && !self.indictorView.superview) {
+        [self.superview addSubview:self.indictorView];
+    }
+    [UIView animateWithDuration:0.3f animations:^{
+         _indictorView.frame = CGRectMake(_indictorView.frame.origin.x, _pullDistance, _indictorView.frame.size.width, _indictorView.frame.size.height);
+        _indictorView.transform = CGAffineTransformMakeRotation(M_PI);
+    } completion:^(BOOL finished) {
+        [_indictorView startAnimating];
+        if (_refreshDelegate && [_refreshDelegate respondsToSelector:@selector(ZHBRefreshScrollViewStartRefresh:)]) {
+            [_refreshDelegate ZHBRefreshScrollViewStartRefresh:self];
+        }
+    }];
+}
+
 -(void)refreshFinishedAnimated:(BOOL)animated{
     if (animated) {
         [UIView animateWithDuration:0.2f animations:^{

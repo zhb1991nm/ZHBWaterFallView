@@ -24,6 +24,8 @@
 
 @property (nonatomic,assign) NSInteger numberOfcolumn;//default 2
 
+@property (nonatomic,assign) UIView *footerView;
+
 @property (nonatomic,weak) id <ZHBWaterFallViewDatasource> waterFallDataSource;
 
 @property (nonatomic,weak) id <ZHBWaterFallViewDelegate> waterFallDelegate;
@@ -53,6 +55,8 @@
 @optional
 
 - (void)waterFallView:(ZHBWaterFallView *)waterFallView didSelectAtIndex:(NSInteger)index;
+
+- (void)waterFallViewDidScroll:(ZHBWaterFallView *)waterFallView;
 
 @end
 

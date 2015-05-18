@@ -241,6 +241,9 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [self waterFallViewDidScroll];
+    if (_waterFallDelegate && [_waterFallDelegate respondsToSelector:@selector(waterFallViewDidScroll:)]) {
+        [_waterFallDelegate waterFallViewDidScroll:self];
+    }
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
@@ -248,7 +251,19 @@
     [self waterFallViewDidScroll];
 }
 
-
-#pragma mark - getter&setter
+#pragma mark getter & setter
+-(void)setFooterView:(UIView *)footerView{
+    if (footerView) {
+        footerView.frame = CGRectMake(0, self.contentSize.height, self.frame.size.width, footerView.frame.size.height);
+        [self addSubview:footerView];
+        self.contentSize = CGSizeMake(self.contentSize.width, self.contentSize.height + footerView.frame.size.height);
+    }else{
+        if (_footerView && _footerView.superview) {
+            [_footerView removeFromSuperview];
+            self.contentSize = CGSizeMake(self.contentSize.width, self.contentSize.height - _footerView.frame.size.height);
+        }
+    }
+    _footerView = footerView;
+}
 
 @end

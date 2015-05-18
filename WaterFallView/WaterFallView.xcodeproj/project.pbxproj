@@ -35,6 +35,7 @@
 		FD0431321B0770970049970C /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0431221B0770970049970C /* UIView+WebCacheOperation.m */; };
 		FD0431351B0772F20049970C /* act.png in Resources */ = {isa = PBXBuildFile; fileRef = FD0431341B0772F20049970C /* act.png */; };
 		FD04313C1B07A0D10049970C /* ZHBRefreshScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */; };
+		FD1B2A181B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B2A171B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m */; };
 		FD38D87C1B08C294002A7144 /* ZHBRefreshIndictorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */; };
 		FD38D87E1B08E22B002A7144 /* arrow-01.png in Resources */ = {isa = PBXBuildFile; fileRef = FD38D87D1B08E22B002A7144 /* arrow-01.png */; };
 		FDF812381B08BCA60000754E /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */; };
@@ -106,6 +107,8 @@
 		FD0431341B0772F20049970C /* act.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act.png; sourceTree = "<group>"; };
 		FD04313A1B07A0D10049970C /* ZHBRefreshScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshScrollView.h; sourceTree = "<group>"; };
 		FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshScrollView.m; sourceTree = "<group>"; };
+		FD1B2A161B0A27FA00D0FCB1 /* ZHBRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshFooterView.h; sourceTree = "<group>"; };
+		FD1B2A171B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshFooterView.m; sourceTree = "<group>"; };
 		FD38D87A1B08C294002A7144 /* ZHBRefreshIndictorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshIndictorView.h; sourceTree = "<group>"; };
 		FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshIndictorView.m; sourceTree = "<group>"; };
 		FD38D87D1B08E22B002A7144 /* arrow-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-01.png"; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				FD04313B1B07A0D10049970C /* ZHBRefreshScrollView.m */,
 				FD38D87A1B08C294002A7144 /* ZHBRefreshIndictorView.h */,
 				FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */,
+				FD1B2A161B0A27FA00D0FCB1 /* ZHBRefreshFooterView.h */,
+				FD1B2A171B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m */,
 			);
 			path = PullToRefresh;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			files = (
 				FD0431001B076D930049970C /* WaterFallCell.m in Sources */,
 				FD04312A1B0770970049970C /* SDWebImageManager.m in Sources */,
+				FD1B2A181B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m in Sources */,
 				FD0431251B0770970049970C /* SDImageCache.m in Sources */,
 				FD0431291B0770970049970C /* SDWebImageDownloaderOperation.m in Sources */,
 				FD0431321B0770970049970C /* UIView+WebCacheOperation.m in Sources */,
