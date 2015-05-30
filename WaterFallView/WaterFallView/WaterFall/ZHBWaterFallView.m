@@ -117,7 +117,7 @@
     
     for (NSInteger i = basicVisibleIndex - 1; i >= 0; --i) {
         cellRect = [(NSValue *)[cellRectArray objectAtIndex:i] CGRectValue];
-        if (![self cellRectInvisibleInScrollView:cellRect]) {
+        if (CGRectGetMaxY(cellRect) >= self.contentOffset.y) {
             if ([self containVisibleCellForIndex:i]) {
                 continue ;
             }
@@ -136,7 +136,7 @@
     
     for (NSInteger i = basicVisibleIndex + 1; i < cellRectArray.count; i ++) {
         cellRect = [(NSValue *)[cellRectArray objectAtIndex:i] CGRectValue];
-        if (![self cellRectInvisibleInScrollView:cellRect]) {
+        if (CGRectGetMinY(cellRect) <= self.contentOffset.y + self.frame.size.height) {
             if ([self containVisibleCellForIndex:i]) {
                 continue ;
             }

@@ -33,6 +33,36 @@
             endingLineNumber = "80"
             landmarkName = "-handlePan1:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ZHBRefreshScrollView handlePan1:]"
+                  moduleName = "WaterFallView"
+                  urlString = "file:///Users/zhb/Documents/github/ZHBWaterFallView/WaterFallView/WaterFallView/PullToRefresh/ZHBRefreshScrollView.m"
+                  timestampString = "454689130.492819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1248">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ZHBRefreshScrollView handlePan1:]"
+                  moduleName = "WaterFallView"
+                  urlString = "file:///Users/zhb/Documents/github/ZHBWaterFallView/WaterFallView/WaterFallView/PullToRefresh/ZHBRefreshScrollView.m"
+                  timestampString = "454689130.493015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WaterFallView/ViewController.m"
-            timestampString = "453655833.525825"
+            timestampString = "454692271.317766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-waterFallView:didSelectAtIndex:"
             landmarkType = "5">
          </BreakpointContent>

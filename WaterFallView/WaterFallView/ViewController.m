@@ -41,11 +41,12 @@
     [super viewDidLoad];
     currentPage = 1;
     self.imageArray = [NSMutableArray arrayWithObjects:
-                       @"http://ww1.sinaimg.cn/bmiddle/70e85378jw1dsxriz44iuj.jpg",
-                       @"http://ww2.sinaimg.cn/bmiddle/70e85378jw1ds8g2gtot8j.jpg",
-                       @"http://ww2.sinaimg.cn/large/5f5d4271gw1dt1i8rf47aj.jpg",
-                       @"http://ww4.sinaimg.cn/bmiddle/70e85378jw1dr57belktxj.jpg",
-                       @"http://ww3.sinaimg.cn/bmiddle/70e85378jw1drayzoda5dj.jpg",
+                       @"http://www.sinaimg.cn/dy/slidenews/21_img/2011_45/18723_575841_627354.jpg",
+                       @"http://img2.a0bi.com/upload/ttq/20140726/1406372686032.jpg",
+                       @"http://dmimg.5054399.com/allimg/gundam/gaodabizhi/16.jpg",
+                       @"http://i1.3conline.com/images/piclib/201006/23/batch/1/62614/1277264619427r1snppyaoq_medium.jpg",
+                       @"http://a.hiphotos.baidu.com/zhidao/pic/item/63d9f2d3572c11df39841f72602762d0f703c20e.jpg",
+                       
                        nil];
     _arrayForShow = [NSMutableArray array];
     
@@ -138,7 +139,7 @@
     for (int i = 0; i < count; i ++) {
         ShowObject *object = [[ShowObject alloc] init];
         object.url = self.imageArray[arc4random() % 4];
-        object.height = ((arc4random() % 3) + 20) * 10;
+        object.height = ((arc4random() % 5)*5 + 20) * 5;
         [array addObject:object];
     }
     return array;
@@ -151,7 +152,7 @@
         waterFallView.waterFallDataSource = self;
         waterFallView.waterFallDelegate = self;
         waterFallView.refreshDelegate = self;
-        waterFallView.numberOfcolumn = 2;
+        waterFallView.numberOfcolumn = 3;
         waterFallView.backgroundColor = [UIColor whiteColor];
         _waterFallView = waterFallView;
     }
