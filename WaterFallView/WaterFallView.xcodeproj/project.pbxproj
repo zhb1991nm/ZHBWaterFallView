@@ -38,6 +38,8 @@
 		FD1B2A181B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B2A171B0A27FA00D0FCB1 /* ZHBRefreshFooterView.m */; };
 		FD38D87C1B08C294002A7144 /* ZHBRefreshIndictorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */; };
 		FD38D87E1B08E22B002A7144 /* arrow-01.png in Resources */ = {isa = PBXBuildFile; fileRef = FD38D87D1B08E22B002A7144 /* arrow-01.png */; };
+		FDAE06A41B1A129A00475917 /* example1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAE06A21B1A129A00475917 /* example1.png */; };
+		FDAE06A51B1A129A00475917 /* example2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAE06A31B1A129A00475917 /* example2.png */; };
 		FDF812381B08BCA60000754E /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		FD38D87A1B08C294002A7144 /* ZHBRefreshIndictorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHBRefreshIndictorView.h; sourceTree = "<group>"; };
 		FD38D87B1B08C294002A7144 /* ZHBRefreshIndictorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHBRefreshIndictorView.m; sourceTree = "<group>"; };
 		FD38D87D1B08E22B002A7144 /* arrow-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-01.png"; sourceTree = "<group>"; };
+		FDAE06A21B1A129A00475917 /* example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = example1.png; path = ../../example1.png; sourceTree = "<group>"; };
+		FDAE06A31B1A129A00475917 /* example2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = example2.png; path = ../../example2.png; sourceTree = "<group>"; };
 		FDF812361B08BCA60000754E /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
 		FDF812371B08BCA60000754E /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,8 @@
 		FD0430CE1B06EEFD0049970C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FDAE06A21B1A129A00475917 /* example1.png */,
+				FDAE06A31B1A129A00475917 /* example2.png */,
 				FD38D87D1B08E22B002A7144 /* arrow-01.png */,
 				FD0431341B0772F20049970C /* act.png */,
 				FD0430CF1B06EEFD0049970C /* Info.plist */,
@@ -356,7 +362,9 @@
 			files = (
 				FD0430DA1B06EEFD0049970C /* Main.storyboard in Resources */,
 				FD38D87E1B08E22B002A7144 /* arrow-01.png in Resources */,
+				FDAE06A41B1A129A00475917 /* example1.png in Resources */,
 				FD0430DF1B06EEFD0049970C /* LaunchScreen.xib in Resources */,
+				FDAE06A51B1A129A00475917 /* example2.png in Resources */,
 				FD0431351B0772F20049970C /* act.png in Resources */,
 				FD0430DC1B06EEFD0049970C /* Images.xcassets in Resources */,
 			);
